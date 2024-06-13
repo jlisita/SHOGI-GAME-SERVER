@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jlisita/SHOGI-GAME-SERVER/issues"
   },
-  "homepage": "https://github.com/jlisita/SHOGI-GAME-SERVER#readme"
+  "homepage": "https://github.com/jlisita/SHOGI-GAME-SERVER#readme",
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
