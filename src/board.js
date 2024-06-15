@@ -24,7 +24,7 @@ class Board {
     // return null otherwise
     getPiece(i,j)
     {
-        return this.squares[i][j].getPiece();
+        return this.getSquare(i,j).getPiece();
     }
 
     // place the piece on square on position (i,j)
@@ -76,8 +76,6 @@ class Board {
             {
                 for(let m=i+1;m<k;m++)
                 {
-                    console.log(` m = ${m}, j = ${j}`);
-                    console.log(`res = ${this.getPiece(m,j)}`);
                     if(this.isOccupiedSquare(m,j))
                         return false;	
                 }
@@ -154,9 +152,9 @@ class Board {
             str += "   | ";
             for(let j = 0; j < 9; j++)
             {
-                if(this.squares[i][j].isOccupied()==true)
+                if(this.isOccupiedSquare(i,j)==true)
                 {
-                    str += this.squares[i][j].getPiece().toStr();
+                    str += this.getPiece(i,j).toStr();
                     str += " | ";
                 }
                 else
@@ -254,4 +252,4 @@ function rowIndexToInt(c)
 	return i;
 }
 
-module.exports = {Board, rankIndexToInt, fileIndexToInt};
+module.exports = {Board, rowIndexToInt, columnIndexToInt};

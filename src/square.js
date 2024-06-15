@@ -16,7 +16,7 @@ class Square {
 
     getPiece()
     {
-        return this.piece
+        return this.piece;
     }
 
     setRow(row)
@@ -53,7 +53,7 @@ class Square {
     //otherwise return false
     isOccupied()
     {
-        return this.getPiece != null;
+        return this.getPiece() != null;
     }
 
     // place the piece on the square if it's empty and return true, 
@@ -67,6 +67,7 @@ class Square {
         else
         {
             this.piece = piece;
+            this.piece.setPosition(this);
             return true;
         }
     }

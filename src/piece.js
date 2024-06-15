@@ -49,6 +49,7 @@ class Piece {
     {
         this.position = position;
     }
+
 }
 
 // classes who inherit from Piece
